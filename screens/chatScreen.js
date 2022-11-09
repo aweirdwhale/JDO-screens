@@ -10,7 +10,7 @@ export default class chatScreen extends React.Component {
   }
 
   devComeback = () => {
-    this.props.navigation.navigate("Login", { name: this.state.name })
+    this.props.navigation.navigate("LoginScreenDark", { name: this.state.name })
   }
 
   render() {
