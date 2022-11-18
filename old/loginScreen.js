@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from "react-native";
+import { CheckBox, StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons'
 import { Dimensions } from 'react-native';
@@ -44,6 +44,11 @@ export default class loginScreen extends React.Component {
                           this.setState({ pwd })
                         }}
                           value={this.state.pwd}
+              />
+              <CheckBox
+                value={isSelected}
+                onValueChange={setSelection}
+                style={styles.checkbox}
               />
 
             
@@ -99,14 +104,19 @@ const styles = StyleSheet.create({
     top: -103
   },
   header: {
+    position: "absolute",
     fontWeight: "400",
     fontSize: 30,
     color: "#48466D",
     marginTop: 32,
+    
+    //center the text
+    textAlign: "center",
+    alignSelf: "center",
 
     //fontFamily: "MontserratRegular"
   },
-  inputName: {
+  inputText: {
     marginTop: 32,
     height: 50,
     backgroundColor: "#93D4D4",
@@ -116,15 +126,8 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     left: -10
   },
-  inputPwd: {
-    marginTop: 32,
-    height: 50,
-    backgroundColor: "#93D4D4",
-    borderRadius: 13,
-    paddingHorizontal: 16,
-    color: "#48466D",
-    fontWeight: "600",
-    left: -10
+  checkbox: {
+
   },
   continue: {
     width: 70,
