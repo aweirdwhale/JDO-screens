@@ -11,12 +11,12 @@ const logo = require('../assets/icon/logoRond.png')
 
 
 //init bottomPopup
-import BottomPopup from '../components/bottomPopup.js'
-const popupList = [
-  { id: 1, name: 'Task' },
-  { id: 2, name: 'Message' },
-  { id: 3, name: 'Note' }
-]
+// import BottomPopup from '../components/bottomPopup.js'
+// const popupList = [
+//   { id: 1, name: 'Task' },
+//   { id: 2, name: 'Message' },
+//   { id: 3, name: 'Note' }
+// ]
 
 
 export default class Login extends React.Component {
@@ -69,15 +69,15 @@ export default class Login extends React.Component {
       );
     }
 
-    let popupRef = React.createRef();
+    // let popupRef = React.createRef();
 
-    const onShowPopup = () => {
-      popupRef.show();
-    }
+    // const onShowPopup = () => {
+    //   popupRef.show();
+    // }
 
-    const onClosePopup = () => {
-      popupRef.close();
-    }
+    // const onClosePopup = () => {
+    //   popupRef.close();
+    // }
 
     return (
 
@@ -88,7 +88,7 @@ export default class Login extends React.Component {
           <View style={styles.circle} />
 
           {/*theme selector*/}
-          <View >
+          {/* <View >
             <TouchableWithoutFeedback onPress={onShowPopup}>
               <Ionicons name="color-palette-outline" size={24} color='#FFF' style={styles.themeSelector}/>
             </TouchableWithoutFeedback>
@@ -98,7 +98,7 @@ export default class Login extends React.Component {
               onTouchOutside={onClosePopup}
               data={popupList}
             />
-          </View>
+          </View> */}
                     
 
 
