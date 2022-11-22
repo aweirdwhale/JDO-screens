@@ -5,10 +5,10 @@ import { Ionicons } from '@expo/vector-icons'
 import { Dimensions } from 'react-native';
 import * as NavigationBar from 'expo-navigation-bar';
 import { encrypt, decrypt } from "../util/crypto";
+//import Loader from "../components/loader.js"; //<Loader />
 
 import stylesA from "../stylesheets/login/purple"; //first theme
 // import oceanLogin from "../stylesheets/login/ocean";
-
 
 //import assets/utils
 
@@ -43,20 +43,21 @@ export default class Login extends React.Component {
   }
 
   continue = async () => {
-    if ( this.state.name == "" || this.state.pwd == "") { return this.errorMessage("Les champs de connexion doivent être remplis !") } 
+    if ( this.state.name == "" || this.state.pwd == "") { this.props.navigation.navigate("Navigator", { name: this.state.name })}//return this.errorMessage("Les champs de connexion doivent être remplis !") } 
     const username = await encrypt(this.state.name); // On encrypte le nom d'utilisateur
     const password = await encrypt(this.state.pwd); // On encrypte le mot de passe
     try {
       const response = await fetch(`https://jdocopilot-api.herokuapp.com/?username=${username}=&password=${password}`); // On récupère les données de pronote
       const franck = await response.json(); // On récupère les données de pronote
-      console.log(franck.params.periods); 
+      console.log(franck.params.periods);
+      this.props.navigation.navigate("Navigator", { name: this.state.name })
       this.props.navigation.navigate("Home", { name: this.state.name }); // On redirige vers la page de chat
     } catch {
       return this.errorMessage("Identifiant ou mot de passe incorrect !") // Si l'identifiant ou le mot de passe est incorrect, on affiche un message d'erreur
     }
 
     
-    //this.props.navigation.navigate("Home", { name: this.state.name }) //utile pendant les tests, sert a passer à une autre page
+    //this.props.navigation.navigate("Navigator", { name: this.state.name }) //utile pendant les tests, sert a passer à une autre page
   }
 
 
