@@ -4,10 +4,10 @@ import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const colors = {
-    primary: "#8F5FC7",
-    secondary: "#4C3575",
-    textfields: "#7858A6",
-    links: "#5B4B8A",
+  primary: "#463F4E",
+  secondary: "rgba(23,28,41,0.5)",
+  textfields: "#463F4E",
+  links: "#463F4E"
 }
 
 export default //styles

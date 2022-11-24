@@ -4,10 +4,10 @@ import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const colors = {
-    primary: "#8F5FC7",
-    secondary: "#4C3575",
-    textfields: "#7858A6",
-    links: "#5B4B8A",
+  primary: "#2D2933",
+  secondary: "rgba(23,28,41,0.5)",
+  textfields: "#463F4E",
+  links: "#463F4E"
 }
 
 export default //styles
@@ -38,35 +38,40 @@ stylesA = StyleSheet.create({ //purpleLogin
     backgroundColor: colors.textfields,
     borderRadius: 13,
     paddingHorizontal: 16,
-    color: "#FFFFFF",
+    color: "#C87327",
     fontWeight: "600",
+  },
+  basicText: {
+    color: "rgba(255,255,255,0.5)",
   },
   checkboxBase: {
     top: 5,
-    left: 5,
+    left: 15,
     width: 20,
     height: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 4,
+    borderRadius: 50,
     borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.5)',
+    borderColor: 'rgb(255, 255, 255)',
     backgroundColor: 'transparent',
   },
 
   checkboxChecked: {
-    borderColor: 'rgba(255, 255, 255, 0.5)',
-    backgroundColor: '#5B4B8A',
+    borderColor: '#C87327',
+    backgroundColor: '',
   },
   check: {
     position: 'absolute',
     alignSelf: 'center',
     left: -2,
+    top: -7,
+    color: '#C87327'
   },
   checkboxLabel: {
-    left: 30,
+    left: 40,
     top: -15,
-    color: 'rgba(255, 255, 255, 0.5)'
+    color: 'rgb(255, 255, 255)'
   },
 
   continue: {
@@ -85,13 +90,13 @@ stylesA = StyleSheet.create({ //purpleLogin
     justifyContent: 'flex-end',
   },
   bottomBox: {
-    backgroundColor: colors.links,
-    borderRadius: 7,
+    backgroundColor: '#342F3A',
+    borderRadius: 15,
     width: width - 15,
     alignItems: 'center',
     textAlignVertical: 'center',
     marginHorizontal: width - (width - 7),
-    marginVertical: 10,
+    marginVertical: 7,
     paddingVertical: 5,
   },
 

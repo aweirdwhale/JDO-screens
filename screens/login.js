@@ -7,7 +7,7 @@ import * as NavigationBar from 'expo-navigation-bar';
 import { encrypt, decrypt } from "../util/crypto";
 //import Loader from "../components/loader.js"; //<Loader />
 
-import stylesA from "../stylesheets/login/purple"; //first theme
+import stylesA from "../stylesheets/login/default"; //first theme
 // import oceanLogin from "../stylesheets/login/ocean";
 
 //import assets/utils
@@ -96,7 +96,7 @@ export default class Login extends React.Component {
         <Pressable
           style={[stylesA.checkboxBase, checked && stylesA.checkboxChecked]}
           onPress={onCheckmarkPress}>
-          {checked && <Ionicons style={stylesA.check} name="checkmark" size={24} color="white" />}
+          {checked && <Ionicons style={stylesA.check} name="checkmark-outline" size={24} color="white" />}
         </Pressable>
       );
     }
@@ -143,11 +143,10 @@ export default class Login extends React.Component {
 
 
           <View style={{ marginHorizontal: 32 }}>
-            <Text style={stylesA.header}>Connectez-vous !</Text>
-            <View style={stylesA.separator} />
+            <Text style={stylesA.header}>Se connecter</Text>
 
 
-            <TextInput style={stylesA.textInput} placeholder="Nom d'utilisateur pronote"
+            <TextInput style={stylesA.textInput} placeholder="Nom d'utilisateur Atrium" placeholderTextColor={'#FFF'}
               //onPressIn={isolateTextInput}
               onChangeText={name => {
                 this.setState({ name })
@@ -156,7 +155,7 @@ export default class Login extends React.Component {
             />
 
 
-            <TextInput secureTextEntry={true} style={stylesA.textInput} placeholder="Mot de passe"
+            <TextInput secureTextEntry={true} style={stylesA.textInput} placeholder="Mot de passe" placeholderTextColor={'#FFF'}
               onChangeText={pwd => {
                 this.setState({ pwd })
               }}
@@ -164,7 +163,7 @@ export default class Login extends React.Component {
             />
 
             <CheckBox />
-            <Text style={stylesA.checkboxLabel}>Se souvenir de moi</Text>
+            <Text style={stylesA.checkboxLabel}>Rester connecté</Text>
 
 
 
@@ -176,10 +175,13 @@ export default class Login extends React.Component {
             </View>
           </View>
 
-
+          
           <View style={stylesA.bottomContainer}>
             <View style={stylesA.bottomBox}>
-              <Text style={stylesA.basicText}>Si vous avez oublié vos identifiants, rien de grave, réinitialisez-le directement via Atrium! JDO-Copilot ne stock aucunes données personnelles.</Text>
+              <Text style={stylesA.basicText}>Si vous avez oublié vos identifiants, rien de grave, réinitialisez-le directement via Atrium!</Text>
+            </View>
+            <View style={stylesA.bottomBox}>
+              <Text style={stylesA.basicText}>JDO-Copilot ne stock aucunes données personnelles.</Text>
             </View>
           </View>
         </View>

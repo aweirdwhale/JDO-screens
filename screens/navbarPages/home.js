@@ -5,12 +5,14 @@ import { NavigationContainer } from "@react-navigation/native"
 import { Ionicons } from '@expo/vector-icons'
 import { View } from "react-native";
 import * as NavigationBar from 'expo-navigation-bar';
-import stylesA from "../../stylesheets/Home/purple.js"
+import styles from "../../stylesheets/Home/default"
 
 import Edt from "../homepages/edt.js"
 import As from "../homepages/as.js"
 import Map from "../homepages/map.js"
 
+import { Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
@@ -23,18 +25,27 @@ export default class TopNav extends React.Component {
       name: ""
     }
   
-    
     render() {
       return(
-    <View style={{ flex: 1, backgroundColor: '#8F5FC7' }}>
+    <View style={{ flex: 1, backgroundColor: '#463F4E' }}>
       <NavigationContainer independent={true}>
         <TopBar.Navigator
             screenOptions={({ route }) => ({
+              // show the tabBarIndicator
+              tabBarIndicatorStyle: {
+                backgroundColor: '#C87327',
+                height: 3,
+                borderRadius: 10,
+                width: width / 3,
+                //marginLeft: 20,
+                //marginRight: 20,
+              },
+
                 tabBarShowLabel: false,
-                tabBarIndicator: () => {'white'},
+                //tabBarIndicator: () => {'#C87327'},
                 tabBarStyle: {
-                    backgroundColor: "#4C3575",
-                    borderTopColor: "#4C3575",
+                    backgroundColor: "#2D2933",
+                    borderTopColor: "#2D2933",
                     borderTopWidth: 1,
                     height: 60,
                     paddingTop: 5,
@@ -49,6 +60,7 @@ export default class TopNav extends React.Component {
 
                     if (route.name === "EDT") {
                         iconName = focused ? "albums" : "albums-outline";
+                          
                     } else if (route.name === "AS") {
                         iconName = focused ? "basketball" : "basketball-outline";
                     } else if (route.name === "PLAN") {

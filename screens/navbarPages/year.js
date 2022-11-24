@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
-import stylesA from "../../stylesheets/Home/purple.js"
+import stylesA from "../../stylesheets/annee/default.js"
 
 export default class Year extends React.Component {
     render() {

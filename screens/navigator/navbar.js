@@ -24,15 +24,15 @@ export default class BottomNav extends React.Component {
   
   render() {
     return(
-    <View style={{ flex: 1, backgroundColor: '#8F5FC7' }}>
+    <View style={{ flex: 1, backgroundColor: '#463F4E' }}>
       <NavigationContainer >
         <BottomBar.Navigator
             screenOptions={({ route }) => ({
-                tabBarActiveTintColor: "white",
+                tabBarActiveTintColor: "#C87327",
                 tabBarInactiveTintColor: "#83698c",
                 tabBarStyle: {
-                    backgroundColor: "#4C3575",
-                    borderTopColor: "#4C3575",
+                    backgroundColor: "#2D2933",
+                    borderTopColor: "#2D2933",
                     borderTopWidth: 1,
                     height: 60,
                     paddingTop: 5,

@@ -3,7 +3,7 @@ import React, {  } from 'react';
 import { ToastAndroid, StyleSheet, Text, View, TextInput, TouchableOpacity, Image, KeyboardAvoidingView, Pressable, Keyboard, TouchableWithoutFeedback } from "react-native";
 
 
-import stylesA from "../../stylesheets/login/purple"; //first theme
+import styles from "../../stylesheets/Home/default.js"; //first theme
 // import oceanLogin from "../stylesheets/login/ocean";
 
 
@@ -29,7 +29,7 @@ render() {
     return (
 
       <>
-        <View style={stylesA.container}>
+        <View style={styles.container}>
           <Text>EDT</Text>
           
         </View>

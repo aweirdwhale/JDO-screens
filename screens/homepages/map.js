@@ -6,7 +6,7 @@ import { Dimensions } from 'react-native';
 import * as NavigationBar from 'expo-navigation-bar';
 import { encrypt, decrypt } from "../../util/crypto";
 
-import stylesA from "../../stylesheets/login/purple"; //first theme
+import stylesA from "../../stylesheets/Home/default"; //first theme
 // import oceanLogin from "../stylesheets/login/ocean";
 
 
@@ -32,7 +32,7 @@ render() {
     return (
 
       <>
-        <View style={stylesA.container}>
+        <View style={styles.container}>
           <Text>Map</Text>
         </View>
     </>
